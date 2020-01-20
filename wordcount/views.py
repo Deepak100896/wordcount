@@ -20,7 +20,7 @@ def count(request):
         # add to the dictionery
             worddict[i] = 1
 
-    sortedwords = sorted(worddict.items(), key=operator.itemgetter(1), reverse=True)
+    sortedwords = sorted(worddict.items(), key=operator.itemgetter(1), reverse=False)
     return render(request, 'count.html',{'fulltext':text,'count':len(wordlist),'sortedwords':sortedwords})
 
 #    print (len(wordlist))
